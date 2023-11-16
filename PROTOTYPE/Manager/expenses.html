@@ -198,35 +198,46 @@ xhr.send();
   <div class="content">
   <div class="page-header">
   <div class="page-title">
-  <h3>Expenses</h3>
+  <h3>Expenses List</h3>
+  <h6>Manage your Expenses</h6>
   </div>
- 
+  <div class="page-btn">
+    <a href="expensesAdd.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img"
+            class="me-1">Add New Expenses</a>
+</div>
   </div>
   
   <div class="card">
   <div class="card-body">
   <div class="table-top">
-  
+    <div class="search-set">
+      <div class="search-input">
+          <a class="btn btn-searchset"><img src="assets/img/icons/search-white.svg" alt="img"></a>
+      </div>
+  </div>
 </div>
 <div class="table-responsive">
-  <table class="table table-nowrap mb-0">
+  <table class="table datanew">
   <thead>
   <tr>
 
   <th>Month / Year</th>
   <th>Total Expenses</th>
+  <th>Action</th>
   </thead>
 
   <tbody>
     <tr onclick="redirectToPage('expensesDetails.html')">
  <td>September 2023</td>
  <td>10,100.00</td>
+ <td> <img src="assets/img/icons/eye.svg" alt="img">  </td>
  </tr>
  
   <tbody>
     <tr onclick="redirectToPage('expensesDetails.html')"> 
     <td>October 2023</td>
     <td>8,000.00</td>
+    <td> <img src="assets/img/icons/eye.svg" alt="img">  </td>
   </tr>
 
   </tbody>

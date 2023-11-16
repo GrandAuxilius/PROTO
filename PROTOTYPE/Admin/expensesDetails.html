@@ -58,18 +58,17 @@
 
 <ul class="nav user-menu">
 
-<li class="nav-item dropdown has-arrow flag-nav">
-<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
-<img src="assets/img/flags/branch.png" alt="" height="20">
-</a>
-<div class="dropdown-menu dropdown-menu-right">
-<a href="javascript:void(0);" class="dropdown-item"> Branch 1</a>
-<a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
-</div>
-</li>
+  <li class="nav-item dropdown has-arrow flag-nav">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
+    <img src="assets/img/flags/branch.png" alt="" height="20">
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+    <a href="javascript:void(0);" class="dropdown-item"> Branch 1</a>
+    <a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
+    </div>
+    </li>
     
-
-
+    
 <li class="nav-item dropdown">
 <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
 <img src="assets/img/icons/notification-bing.svg" alt="img"> <span class="badge rounded-pill">4</span>
@@ -216,17 +215,12 @@ xhr.send();
           <div class="page-header">
           <div class="row">
           <div class="col-sm-12">
-          <h3 class="page-title">Expense Details</h3>
+          <div class="page-title">
+            <h4>Expenses Details</h4>
+            <h6>Expenses for <a class="card-title"><span id="todays-date"></span></a></h6>
           </div>
           </div>
-             
-    <div class="page-btn">
-      <a href="expensesAdd.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" class="me-2" alt="img"> Add New Expenses</a>
-      </div>
           </div>
-            <div class="date-box">
-              <br>
-              
           </div>
           
    
@@ -234,9 +228,7 @@ xhr.send();
             <div class="card-body">
             <div class="row">
             <div class="form-group">
-          <div class="card-header">
-          <a class="card-title"><span id="todays-date"></span></a>
-          </div>
+
           
             
                 <a href="expensesDetails.html">

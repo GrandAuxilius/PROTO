@@ -184,8 +184,8 @@
   <div class="content">
   <div class="page-header">
   <div class="page-title">
-  <h4>Order List</h4>
-  <h6></h6>
+  <h4>Orders List</h4>
+  <h6>November 12, 2019</h6>
   </div>
   </div>
   <style>
@@ -250,7 +250,7 @@
   }
   </style>
   <div class="card">
-  <!--Date Picker-->
+
   <div class="card-body">
   <div class="row">
   <div class="category-box-order" href="#" data-bs-toggle="modal" data-bs-target="#order1">
@@ -329,224 +329,114 @@
   </div>
   </div>
   </div>
-  <div class="modal fade" id="order1" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-  <div class="modal-header">
-  <h5 class="modal-title"></h5>
-  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-  </button>
+
+
+  <div class="modal fade" id="order1" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Order Details</h5>
+    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">×</span>
+    </button>
+    </div>
+  
+    <div class="modal-body-transaction">
+    <div class="row">
+    <div class="col-12">
+      <b>
+      Order ID: 202080099 <br>
+  Table: 12
+  </b>
+  <div class="customer-info">
+    <div class="table-responsive">
+      <table class="table mb-0">
+      <thead>
+      <tr>
+  
+      </tr>
+      </thead>
+      <tbody>
+        Orders List:
+      <tr>
+      <td>
+        <div class="dishname"> <span>Chicken Inasal</span> (Meal) <br>x3  </div>
+      </td>
+      <td> </td>
+      <td><img src="assets/img/yum.png" height="50" width="50" ></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="dishname"> <span>Classsic TLC Burgers</span> (Burgers) <br>x1</div>
+        </td>
+        <td> </td>
+        <td><img src="assets/img/yum.png" height="50" width="50" ></td>
+        </tr>
+
+  
+      </tbody>
+      </table>
+      
+      </div>
   </div>
-  <div class="modal-body">
-  <div class="row">
-  <div class="col-12">
-  <div class="form-group">
-  <h5> Order #: 202306211 </h5>
-  <h5> Name: Francis Joe </h5>
-  <h5> Table Number: 12</h5>
-  <div class="table-responsive">
-  <table class="table table-nowrap mb-0">
-  <thead>
-  <tr>
-    <th></th>
-    <th>Menu</th>
-    <th>Quantity</th>
-  </tr>
-  </thead>
-  <tbody>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  <td>
-    <img src="assets/img/yum.png" height="50" width="50" >
-  </td>
-  <td>Pancake</td>
-  <td>3x</td>
-  </tr>
-  </tbody>
-  </table>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="modal-footer">
-  <button type="button" class="btn btn-order">Order Cooked</button>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="modal fade" id="createpayment" tabindex="-1" aria-labelledby="createpayment" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-  <div class="modal-content">
-  <div class="modal-header">
-  <h5 class="modal-title">Create Payment</h5>
-  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-  </div>
-  <div class="modal-body">
-  <div class="row">
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Customer</label>
-  <div class="input-group">
-  <input type="text" value="2022-03-07" class="datetimepicker">
-  <a class="scanner-set input-group-text">
-  <img src="assets/img/icons/datepicker.svg" alt="img">
-  </a>
-  </div>
-  </div>
-  </div>
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Reference</label>
-  <input type="text" value="INV/SL0101">
-  </div>
-  </div>
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Received Amount</label>
-  <input type="text" value="1500.00">
-  </div>
-  </div>
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Paying Amount</label>
-  <input type="text" value="1500.00">
-  </div>
-  </div>
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Payment type</label>
-  <select class="select">
-  <option>Cash</option>
-  <option>Online</option>
-  <option>Inprogress</option>
-  </select>
-  </div>
-  </div>
-  <div class="col-lg-12">
-  <div class="form-group">
-  <label>Note</label>
-  <textarea class="form-control"></textarea>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="modal-footer">
-  <button type="button" class="btn btn-submit">Submit</button>
-  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="modal fade" id="editpayment" tabindex="-1" aria-labelledby="editpayment" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-  <div class="modal-content">
-  <div class="modal-header">
-  <h5 class="modal-title">Edit Payment</h5>
-  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-  </div>
-  <div class="modal-body">
-  <div class="row">
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Customer</label>
-  <div class="input-group">
-  <input type="text" value="2022-03-07" class="datetimepicker">
-  <a class="scanner-set input-group-text">
-  <img src="assets/img/icons/datepicker.svg" alt="img">
-  </a>
-  </div>
-  </div>
-  </div>
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Reference</label>
-  <input type="text" value="INV/SL0101">
-  </div>
-  </div>
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Received Amount</label>
-  <input type="text" value="1500.00">
-  </div>
-  </div>
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Paying Amount</label>
-  <input type="text" value="1500.00">
-  </div>
-  </div>
-  <div class="col-lg-6 col-sm-12 col-12">
-  <div class="form-group">
-  <label>Payment type</label>
-  <select class="select">
-  <option>Cash</option>
-  <option>Online</option>
-  <option>Inprogress</option>
-  </select>
-  </div>
-  </div>
-  <div class="col-lg-12">
-  <div class="form-group">
-  <label>Note</label>
-  <textarea class="form-control"></textarea>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="modal-footer">
-  <button type="button" class="btn btn-submit">Submit</button>
-  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-  </div>
-  </div>
-  </div>
-  </div>
+  
+  <style>
+  .dishname{
+    text-align: left;
+    margin-left: 15px;
+  }
+  .dishname span {
+    font-weight: bold;
+  }
+  
+      </style>
+  
+  
+    </div>
+  
+  
+  
+    </div>
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-submit">Order Cooked</button>
+    </div>
+    </div>
+    </div>
+    </div>
+  <style>
+  
+  .customer-info {
+    background-color: white; 
+    border: 1px solid #393939; 
+    padding: 10px; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+    margin-top: 10px;
+  }
+  
+  .modal-body-transaction{position:relative;flex:1 1 auto;padding:1rem;background-color: #B3DDA1;}
+  </style>
+
+<script>
+  const currentDate = new Date();
+  
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+  
+  const month = monthNames[currentDate.getMonth()];
+  const day = currentDate.getDate();
+  const year = currentDate.getFullYear();
+  
+  const formattedDate = `${month} ${day}, ${year}`;
+  
+  document.getElementById('current-date').textContent = formattedDate;
+  
+  
+    </script>
+
   <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/feather.min.js"></script>
   <script src="assets/js/jquery.slimscroll.min.js"></script>
