@@ -63,8 +63,8 @@
     <a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
     </div>
     </li>
-
-
+    
+    
 
 
 <li class="nav-item dropdown">
@@ -243,27 +243,28 @@ xhr.send();
         <br>
         <p>Message1:<br>
            Dear Rossana Pean,<br>
-           Write your message here...
+           I hope this message finds you well. I would like to provide you with a brief summary report for Leonidas
         </p>
         <br>
         <br>
-        <p>Date:</p>
+        <p>Date: June 23, 2023  
+          Leonidas Restaurant - Branch 1:</p>
         <br>
         <br>
-        <p>Total Sales: [Amount]</p>
+        <p>Total Sales: P102,230.00</p>
         <br>
         <br>
         <p>Message2:<br>
           Dear Rossana Pean,<br>
-          Write your message here...
+          Please note that these figures represent the key financial data for the day. For a more comprehensive report or further analysis, I encourage you to visit our website. Thank you for your attention to this matter.
        </p>
         <br>
         <br>
         <p>Sincerely,<br>
-        [Your Name]<br>Manager</p>
+          Thomas Pean  <br>Manager</p>
       </div>
     
-        
+      <button class="save-button btn btn-submit" onclick="save()">Send</button>
     </div>
   </div>
   
@@ -363,6 +364,9 @@ function redirectToPage(pageUrl) {
     // Add logic to stop editing (for example, disable the content editing)
     document.getElementById('editable-content').contentEditable = false;
 }
+function save() {
+            alert("Save button clicked!");
+        }
     </script>
   
 

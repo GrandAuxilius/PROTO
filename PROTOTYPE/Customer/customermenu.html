@@ -37,17 +37,11 @@
         </ul>
   </div>
 
-  <div id="sidebar-container"></div>
-  <script>
-   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'sidebar.html', true);
-  xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-          document.getElementById('sidebar-container').innerHTML = xhr.responseText;
-      }
-  };
-  xhr.send();
-  </script>
+<div class="sidebar" id="sidebar">
+<div class="sidebar-inner slimscroll">
+<div id="sidebar-menu" class="sidebar-menu">
+<ul>
+
 <li class="submenu">
   <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span> Menu</span> <span class="menu-arrow"></span></a>
   <ul>
@@ -59,15 +53,14 @@
 <li class="submenu">
   <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span>Orders</span><span class="menu-arrow"></span></a>
  <ul>
-  <li><a href="#">Orders Cart</a></li>
-  <li><a href="#">Orders Details</a></li>
+  <li><a href="customerorderscart.html">Orders Cart</a></li>
+  <li><a href="customerordersdetails.html">Orders Details</a></li>
  </ul>
 </li>
 <li class="submenu">
   <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span>Reservation</span><span class="menu-arrow"></span></a>
   <ul>
-    <li><a href="#">Orders Cart</a></li>
-    <li><a href="#">Orders Details</a></li>
+    <li><a href="customerreservationlist.html">Reservation List</a></li>
    </ul>
 </li>
 </div>
@@ -85,38 +78,38 @@
   
     <div class="content">
       <div class="box">
-          <img src="https://via.placeholder.com/200" alt="Chicken Inasal">
+          <img src="assets/img/product/meals-chicken-adobo.jpg" alt="Chicken Inasal" width="100px" height="80px">
           <div class="divider"></div>
        <div class="word-content">
-        <p>Chicken Inasal <br>P200.00</p>
-        <button class="ordersb btn btn-submit" onclick="save()">Add to Cart</button> 
+        <p>Chicken Adobo <br>P200.00</p>
+        <button class="ordersb btn btn-submit" onclick="redirectToPage('customerorderscart.html')">Add to Cart</button> 
        </div>
       </div>
 
       <div class="box">
-        <img src="https://via.placeholder.com/200" alt="Chicken Inasal">
+        <img src="assets/img/product/meals-chicken-adobo.jpg" alt="Chicken Inasal" width="100px" height="80px">
         <div class="divider"></div>
      <div class="word-content">
-      <p>Tapsilog <br>P150.00</p>
-      <button class="ordersb btn btn-submit" onclick="save()">Add to Cart</button> 
+      <p>Chicken Adobo <br>P150.00</p>
+      <button class="ordersb btn btn-submit" onclick="redirectToPage('customerorderscart.html')">Add to Cart</button> 
      </div>
     </div>
 
     <div class="box">
-      <img src="https://via.placeholder.com/200" alt="Chicken Inasal">
+      <img src="assets/img/product/meals-chicken-adobo.jpg" alt="Chicken Inasal" width="100px" height="80px">
       <div class="divider"></div>
    <div class="word-content">
-    <p>Bulalo <br>P300.00</p>
-    <button class="ordersb btn btn-submit" onclick="save()">Add to Cart</button> 
+    <p>Chicken Adobo <br>P300.00</p>
+    <button class="ordersb btn btn-submit" onclick="redirectToPage('customerorderscart.html')">Add to Cart</button> 
    </div>
   </div>
 
   <div class="box">
-    <img src="https://via.placeholder.com/200" alt="Chicken Inasal">
+    <img src="assets/img/product/meals-chicken-adobo.jpg" alt="Chicken Inasal" width="100px" height="80px">
     <div class="divider"></div>
  <div class="word-content">
-  <p>Chicken inasal <br>P200.00</p>
-  <button class="ordersb btn btn-submit" onclick="save()">Add to Cart</button> 
+  <p>Chicken Adobo <br>P200.00</p>
+  <button class="ordersb btn btn-submit" onclick="redirectToPage('customerorderscart.html')">Add to Cart</button> 
  </div>
 </div>
   </div>
@@ -264,7 +257,8 @@ const dateElement = document.getElementById('todays-date');
           const options = { year: 'numeric', month: 'long', day: 'numeric'};
           dateElement.textContent = today.toLocaleDateString(undefined, options);
 
-function redirectToPage(pageUrl) {
+
+        function redirectToPage(pageUrl) {
             window.location.href = pageUrl;
         }
     </script>

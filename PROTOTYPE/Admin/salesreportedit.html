@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <meta name="description" content="POS - Bootstrap Admin Template">
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Leonidas Restaurant</title>
+<title>Dreams Pos admin template</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo2.png">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
@@ -63,6 +63,9 @@
     <a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
     </div>
     </li>
+    
+    
+
 
 <li class="nav-item dropdown">
 <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
@@ -222,57 +225,68 @@ xhr.send();
     
         <br>
         <br>
+
         <div class="letter-container">
+          <div class="col-lg-1 col-sm-6 col-12">
+            <div class="form-group">
           <label for="new-contentr1">Time:</label>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text">
+        </div>
+      </div>
+          <div class="col-lg-1 col-sm-6 col-12">
+            <div class="form-group">
           <label for="new-contentr1">Frequent:</label>
+          <input type="text">
           <br>
-          <textarea id="new-contentr1" name="new-content"></textarea>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <textarea id="new-contentr1" name="new-content"></textarea>
-          <br>
-          <br>
-          <br>
-        <label for="new-content1">To:</label>
+        </div>
+      </div>
+
+        <div class="col-lg-3 col-sm-6 col-12">
+        <div class="form-group">
+        <label>Subject:</label>
+        <input type="text" placeholder="Type your comments here...">
+        </div>
+        </div>
+
         <br>
-        <textarea id="new-content1" name="new-content"></textarea>
-        <br>
-        <br>
-        <label for="new-content2">Subject:</label>
-        <br>
-        <textarea id="new-content2" name="new-content"></textarea>
-        <br>
-        <br>
+        <div class="form-group">
+  
         <label for="new-content3">Message1:</label>
-        <br>
-        <textarea id="new-content3" name="new-content"></textarea>
-        <br>
-        <br>
-        <label for="new-content1">Date:</label>
-        <br>
-        <textarea id="new-content1" name="new-content"></textarea>
+        <textarea id="new-content3" name="new-content">Dear Rossana Pean, 
+
+          I hope this message finds you well. I would like to provide you with a brief summary report for Leonidas</textarea>
         <br>
         <br>
-        <label for="new-content2">Total Sales:</label>
+        
         <br>
-        <textarea id="new-content2" name="new-content"></textarea>
-        <br>
-        <br>
+        <div class="col-lg-3 col-sm-6 col-12">
+          <div class="form-group">
+          <label>Date:</label>
+          <input type="text" placeholder="June 23, 2023">
+          </div>
+          </div>
+          <br>
+          <div class="col-lg-3 col-sm-6 col-12">
+            <div class="form-group">
+            <label>Total Sales:</label>
+            <input type="text" placeholder="P102,230.00">
+            </div>
+            </div>
+            <br>
         <label for="new-content3">Message2:</label>
+        <textarea id="new-content3" name="new-content">Please note that these figures represent the key financial data for the day. For a more comprehensive report or further analysis, I encourage you to visit our website. Thank you for your attention to this matter.</textarea>
         <br>
-        <textarea id="new-content3" name="new-content"></textarea>
         <br>
         <br>
         <label for="new-content4">Sincerely,</label>
-        <br>
-        <textarea id="new-content4" name="new-content"></textarea>
+        <textarea id="new-content4" name="new-content">Thomas Pean  
+        Manager</textarea>
         <br>
         <br>
         <br>
    
 
-        <button class="save-button btn btn-submit" onclick="save()">Update</button>
+        <button class="save-button btn btn-submit" onclick="goBack()">Update</button>
         
     </div>
   </div>
@@ -380,10 +394,9 @@ function redirectToPage(pageUrl) {
         setInterval(updateTimestamp, 1000);
 
 
-        function save() {
-            alert("Save button clicked!");
+        function goBack() {
+            window.history.back();
         }
-
     </script>
   
 

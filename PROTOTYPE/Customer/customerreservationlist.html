@@ -35,25 +35,15 @@
     
     
     
-  
-      <div id="sidebar-container"></div>
-      <script>
-       var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'sidebar.html', true);
-      xhr.onreadystatechange = function () {
-          if (xhr.readyState == 4 && xhr.status == 200) {
-              document.getElementById('sidebar-container').innerHTML = xhr.responseText;
-          }
-      };
-      xhr.send();
-      </script>
-      
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-inner slimscroll">
+      <div id="sidebar-menu" class="sidebar-menu">
       <ul>
       
       <li class="submenu">
         <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span> Menu</span> <span class="menu-arrow"></span></a>
         <ul>
-        <li><a href="#breakfast">Breakfast</a></li>
+        <li><a href="customermenu.html">Breakfast</a></li>
         <li><a href="#">Meals</a></li>
         <li><a href="#">Beverages</a></li>
       </ul>
@@ -61,8 +51,8 @@
       <li class="submenu">
         <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span>Orders</span><span class="menu-arrow"></span></a>
        <ul>
-        <li><a href="#">Orders Cart</a></li>
-        <li><a href="#">Orders Details</a></li>
+        <li><a href="customerorderscart.html">Orders Cart</a></li>
+        <li><a href="customerordersdetails.html">Orders Details</a></li>
        </ul>
       </li>
       <li class="submenu">

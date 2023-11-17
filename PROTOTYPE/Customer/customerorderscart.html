@@ -39,32 +39,15 @@
 
 
 
-  <div id="sidebar-container"></div>
-  <script>
-   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'sidebar.html', true);
-  xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-          document.getElementById('sidebar-container').innerHTML = xhr.responseText;
-      }
-  };
-  xhr.send();
-  </script>
-  
-
-
-
-
-
-
-
-    
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-inner slimscroll">
+  <div id="sidebar-menu" class="sidebar-menu">
   <ul>
   
   <li class="submenu">
     <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span> Menu</span> <span class="menu-arrow"></span></a>
     <ul>
-    <li><a href="#breakfast">Breakfast</a></li>
+    <li><a href="customermenu.html">Breakfast</a></li>
     <li><a href="#">Meals</a></li>
     <li><a href="#">Beverages</a></li>
   </ul>
@@ -73,14 +56,13 @@
     <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span>Orders</span><span class="menu-arrow"></span></a>
    <ul>
     <li><a href="#" class="active">Orders Cart</a></li>
-    <li><a href="#">Orders Details</a></li>
+    <li><a href="customerordersdetails.html">Orders Details</a></li>
    </ul>
   </li>
   <li class="submenu">
     <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span>Reservation</span><span class="menu-arrow"></span></a>
     <ul>
-      <li><a href="#">Orders Cart</a></li>
-      <li><a href="#">Orders Details</a></li>
+      <li><a href="customerreservationlist.html">Reservation List</a></li>
      </ul>
   </li>
   </div>
@@ -109,11 +91,11 @@
     <div class="card-body">
   <a href="menuCategoryDetails.html">
     <div class="images">
-    <img src="assets/img/product/product47.jpg" width="150" height="100" alt="breakfast"> 
+      <img src="assets/img/product/meals-chicken-adobo.jpg" alt="Chicken Inasal" width="150px" height="100px">
   </div>
   </a>
   <div class="sideleft-content">
-  <p>Chicken inasal <br>P200.00</p>
+  <p>Chicken Adobo <br>P200.00</p>
   <div class="counter-button">
     <button class="buttons" onclick="decrement()">-</button>
     <button class="buttons" onclick="increment()">+</button>
@@ -132,7 +114,7 @@
   <h5>Total Bill: P 600.00</h5>
 </div>
 <br>
-<button class="ordersm btn btn-submit" onclick="save()">Placed Order</button>
+<button class="ordersm btn btn-submit" onclick="redirectToPage('customerordersdetails.html')">Placed Order</button>
   
 </div>
 </div>
