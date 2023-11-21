@@ -7,7 +7,7 @@
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Login - Pos admin template</title>
+<title>Sign In</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
@@ -30,7 +30,9 @@
 </div>
 <div class="login-userheading">
 <h3>Sign In</h3>
-<h4>Please login to your account</h4>
+<div class="alert">
+    <h4>Your Account has been Locked. Please contact administration</h4>
+</div>
 </div>
 
 <div class="form-login">
@@ -55,28 +57,6 @@
 <div class="form-login">
 <a class="btn btn-login" href="index.html">Sign In</a>
 </div>
-<div class="signinform text-center">
-<h4>Don’t have an account? <a href="signup.html" class="hover-a">Sign Up</a></h4>
-</div>
-<div class="form-setlogin">
-<h4>Or sign up with</h4>
-</div>
-<div class="form-sociallink">
-<ul>
-<li>
-<a href="javascript:void(0);">
-<img src="assets/img/icons/google.png" class="me-2" alt="google">
-Sign Up using Google
-</a>
-</li>
-<li>
-<a href="javascript:void(0);">
-<img src="assets/img/icons/facebook.png" class="me-2" alt="google">
-Sign Up using Facebook
-</a>
-</li>
-</ul>
-</div>
 </div>
 </div>
 <div class="login-img">
@@ -86,7 +66,16 @@ Sign Up using Facebook
 </div>
 </div>
 
+<style>
+    .alert {
+        padding: 15px;
+        background-color: #da817a;
+        color: white;
+        border-radius: 3px;
+        font-family: Arial, sans-serif;
+    }
 
+</style>
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/feather.min.js"></script>
