@@ -98,8 +98,7 @@
               </div>
               <hr class="m-0">
               <a class="dropdown-item" href="profile.html"> <i class="me-2" data-feather="user"></i> Account Info</a>
-              <a class="dropdown-item" href="profile.html"> <i class="me-2" data-feather="clock"></i>Order History</a>
-              <a class="dropdown-item" href="profile.html"> <i class="me-2" data-feather="clock"></i> Reservation History</a>
+              <a class="dropdown-item" href="customerOrderHistory.html"> <i class="me-2" data-feather="clock"></i> History</a>
               <hr class="m-0">
               <a class="dropdown-item logout pb-0" href="signin.html"><img src="assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
             </div>
@@ -131,14 +130,14 @@
        
           <div class="card">
             <div class="card-body">
-      
       <br>
       <br>
               <div class="tabs_container">
                 <div class="tab_content active" data-tab="fruits">
                   <div class="row">
+
                     <div class="col-lg-3 col-sm-6 d-flex">
-                      <div class="productset flex-fill active">
+                      <div class="productset flex-fi">
                         <div class="productsetimg">
                           <img
                             src="assets/img/product/meals-sisig.jpg"
@@ -153,6 +152,7 @@
                           <h5>Meals</h5>
                           <h4>Sisig</h4>
                           <h6>150.00</h6>
+                          <button class="add-to-cart-button">Add to Cart</button>
                         </div>
                       </div>
                     </div>
@@ -350,116 +350,39 @@
         
         <style>
            
-     
-      
-        
-          .navbar {
-         background-color: #B8CAC1;
-         overflow: hidden;
-         position: fixed;
-         top: 0;
-         width: 100%;
-         display: flex;
-         justify-content: flex-end;
-         align-items: center;
-         float: left;
-        }
-        
-        .navbar a {
-         color:#393939;
-         text-align: center;
-         padding: 14px 16px;
-         text-decoration: none;
-         font-size: 20px;
-         padding: 10px 20px;
-         margin: 0 5px;
-        
-        }
-        
-        
-        
-        .navbar-signin-btn {
-            background-color: #00BF63;
-            border: none;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-         
-            cursor: pointer;
-            padding: 5px 14px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        
-        .navbar-signin-btn:hover {
-            background-color: #00b380;
-        }
-        
-        
-            .content {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                }
-                .box {
-                    width: 200px;
-                    height: 300px;
-                    background-color: #f8f9fa;
-                    margin: 40px;
-                    padding: -60px;
-                    padding-top: -100px;
-                    padding-bottom: 10px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border: 1px solid rgb(194, 194, 194);
-                    flex-direction: column;
-            
-             
-                }
-                .box img {
-                    max-width: 50%;
-                    max-height: 50%;
-                   
-                    
-                }
-                @media (max-width: 900px) {
-                    .box {
-                        width: 100%;
-                    }
-                }
-        
-                .divider {
-          margin-top: 10px;
-                    width: 100%;
-                    height: .5px;
-                    background-color: rgb(194, 194, 194);
-                }
-        
-        .word-content
-        {
-          
-          margin-top: 40px;
-          text-align: center;
-        }
-        
-        
+         /* Reset standard margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.productsetcontent {
+  margin: 0;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 10px 0; /* Set top and bottom padding to 10px, remove left and right padding */
+  margin: 0; /* Remove margin */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: #45a049;
+}
+
         
         </style>
         
-          <script>
-        
-        const dateElement = document.getElementById('todays-date');
-                  const today = new Date();
-                  const options = { year: 'numeric', month: 'long', day: 'numeric'};
-                  dateElement.textContent = today.toLocaleDateString(undefined, options);
-        
-        
-                function redirectToPage(pageUrl) {
-                    window.location.href = pageUrl;
-                }
-            </script>
           
         
             </div>
