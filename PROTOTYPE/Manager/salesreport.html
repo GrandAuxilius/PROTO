@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <meta name="description" content="POS - Bootstrap Admin Template">
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Leonidas Restaurant</title>
 
-<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo2.png">
+<title>Dreams Pos admin template</title>
 
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="assets/css/animate.css">
@@ -53,8 +54,6 @@
 </a>
 
 <ul class="nav user-menu">
-
-
 
 
 <li class="nav-item dropdown">
@@ -177,7 +176,6 @@
 </div>
 
 </div>
-
 <div id="sidebar-container"></div>
 <script>
  var xhr = new XMLHttpRequest();
@@ -198,7 +196,9 @@ xhr.send();
   <div class="content">
   <div class="page-header">
   <div class="page-title">
-  <h3>Sales Report</h3>
+  <h3>Update Sales Report</h3>
+  
+
   </div>
  
   </div>
@@ -206,80 +206,186 @@ xhr.send();
   <div class="card">
   <div class="card-body">
 
-  <div class="table-top">
-    <div class="card-header">
-      <a class="card-title">Date: <span id="todays-date">(Today)</span>
-      </div>
-      Time: <span id="todays-time"></span></a>
-  </div>
-      
-      <div class="card">
-        <div class="card-body">
-          <div class="row"> 
 
-
-            
- 
-        <h2>PREVIEW</h2>
-        <a class="edit-button me-3" href="salesreportedit.html"><img src="assets/img/icons/edit.svg" alt="img"></a>
-        <br>
-        <br>
-        <br>
-        <p>To: rosannepean12@gmail.com</p>
-        <br>
-        <br>
-        <p>Subject: Leonidas Restaurant - Branch 1: Report Summary</p>
-        <br>
-        <br>
-        <p>Message1:<br>
-           Dear Rossana Pean,<br>
-           I hope this message finds you well. I would like to provide you with a brief summary report for Leonidas
-        </p>
-        <br>
-        <br>
-        <p>Date: June 23, 2023  
-          Leonidas Restaurant - Branch 1:</p>
-        <br>
-        <br>
-        <p>Total Sales: P102,230.00</p>
-        <br>
-        <br>
-        <p>Message2:<br>
-          Dear Rossana Pean,<br>
-          Please note that these figures represent the key financial data for the day. For a more comprehensive report or further analysis, I encourage you to visit our website. Thank you for your attention to this matter.
-       </p>
-        <br>
-        <br>
-        <p>Sincerely,<br>
-          Thomas Pean  <br>Manager</p>
-      </div>
+        <a class="card-title">Date: <span id="todays-date"></span></a>
     
-      <button class="save-button btn btn-submit" onclick="save()">Send</button>
+        <br>
+
+
+        <table>
+          <tr>
+            <th>Total Sales</th>
+            <th>₱ 30,000.00</th>
+          
+          </tr>
+          <tr>
+            <td>Number of Transactions</td>
+            <td>74</td>
+           
+          </tr>
+          <tr>
+            <td>Total Expense</td>
+            <td>0</td>
+           
+          </tr>
+         
+        </table>
+
+<br>
+<br>
+<div class="cards">
+  <div class="card-body">
+
+      <div class="row align-items-center">
+          <div class="col">
+              <h3 class="card-title">Email Sending Details</h3>
+          </div>
+          <div class="col text-end">
+              <a href="#" class="icon-link">
+                  <i class="fas fa-envelope" style="font-size: 2rem;"></i>
+              </a>
+          </div>
+      </div>
+
+      <br>
+      <br>
+      <div class="row mx-auto">
+          <div class="col-xl-6">
+              <div class="form-group row">
+                  <label class="col-lg-2 col-form-label">To</label>
+                  <div class="col-lg-9">
+                      <input type="text" class="form-control" value="rosannapean12@gmail.com">
+                  </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-lg-2 col-form-label">Subject</label>
+                  <div class="col-lg-9">
+                      <input type="text" class="form-control" value="Leonidas Restaurant - Main Branch: November 18, 2013 Sales Summary">
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-xl-6">
+              <div class="form-group row">
+                  <label class="col-lg-2 col-form-label">Message</label>
+                  <div class="col-lg-10">
+                      <textarea class="form-control" rows="8" >I would like to provide you with a brief summary report for Leonidas Restaurant - Main Branch: November 18, 2023 Sales Summary:</textarea>
+                  </div>
+              </div>
+            </div>
+              <div class="form-group row">
+                <label class="col-lg-2 col-form-label">Schedule Time for Email</label>
+                <div class="col-lg-9">
+                    <input type="time" class="form-control" value="20:00" style="width: 15.5% !important;"> 
+                </div>
+            </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="col-lg-12 d-flex justify-content-end" style="margin-bottom: 10px;" >
+  <a href="" class="btn btn-submit me-2">Save/Export</a>
+  <a href="" class="btn btn-submit me-2" data-bs-toggle="modal" data-bs-target="#Report">Send Report</a>
+  
+</div>
+</div>
+
+</div>
+
+<div class="modal fade" id="Report" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header"  style="background-color: #EDEDED;">
+<h4 class="modal-title">PREVIEW</h4>
+<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body" style="background-color: #EDEDED;">
+<div class="row">
+<div class="col-12">
+  <div class="form-group">
+    <div class="modal-box-report">
+      <p>To: rosannapean12@gmail.com</p>
+      <p>Subject: Leonidas Restaurant - Main Branch: November 18, 2013 Sales Summary</p>
+      <br>
+      <p>Dear Rossana Pean,</p>
+      <br>
+      <p>I would like to provide you with a brief report for Leonidas Restaurant - Main Branch: November 18, 2023 Sales Summary:</p>
+      <br>
+      <h5>Total Sales: 30,000</h5>
+      <h5>Number of Transactions: 74</h5>
+      <h5>Total Expenses: 0</h5>
     </div>
   </div>
-  
 </div>
+</div>
+<div class="modal-footer">
+  <div class="d-flex justify-content-center">
+    <a href="" class="btn btn-submit me-2" data-bs-toggle="modal" data-bs-target="#Report" style="margin-left:210%">Send Report</a>
 
-</div>
-</div>
-</div>
-
-
-
-</div>
-</div>
-</div>
+  </div>
 </div>
 </div>
 </div>
 </div>
 
-  
-  
-  
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
+
+  .modal-box-report {
+    width: 100%; 
+    height: 100%;
+    max-width: 450px;
+    max-height: 450px;
+    margin: 0 auto; 
+    border: 1px solid #000;
+    border-radius: none;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 20px;    
+    }
+
+
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+    background-color: #fff;
+  }
+  
+
 
 .card {
             border: 1px solid #ccc;
@@ -289,33 +395,18 @@ xhr.send();
             margin: 0 auto;
             background-color: #f9f9f9;
         }
+
         
-        .editable-section {
-            border: 1px dashed #ccc;
-            padding: 10px;
-            margin: 10px 0;
-            min-height: 50px;
-        }
+.cards {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: auto;
+  max-width: auto;
+  margin: 0 auto;
+  background-color: #EDEDED;
+}
+        
        
-        .edit-button {
-            position: absolute;
-            top: 15px;
-            right: 0px;
-            width: 30px;
-            height: 30px;
-            padding: 2px;
-        }
-        .save-button {
-            position: absolute;
-            bottom: 10px;
-            top: auto;
-            right: 15px;
-            width: 10px;
-            height: 30px;
-            padding: 1px;
-        }
-    
-      
 
 </style>
 
@@ -346,16 +437,8 @@ function redirectToPage(pageUrl) {
         setInterval(updateTimestamp, 1000);
 
 
-        function saveAndStopEditing() {
-    var content = document.getElementById('editable-content').innerHTML;
-    // You can add code here to save the content, e.g., send it to a server or store it in localStorage
-    alert('Content saved successfully!');
-
-    // Add logic to stop editing (for example, disable the content editing)
-    document.getElementById('editable-content').contentEditable = false;
-}
-function save() {
-            alert("Save button clicked!");
+        function goBack() {
+            window.history.back();
         }
     </script>
   
