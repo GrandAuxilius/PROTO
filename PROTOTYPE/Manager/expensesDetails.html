@@ -23,6 +23,10 @@
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 
 <link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="stylesheet" href="assets/plugins/stickynote/sticky.css">
+
+
 </head>
 <body>
 <div id="global-loader">
@@ -54,7 +58,17 @@
 
 <ul class="nav user-menu">
 
-
+  <li class="nav-item dropdown has-arrow flag-nav">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
+    <img src="assets/img/flags/branch.png" alt="" height="20">
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+    <a href="javascript:void(0);" class="dropdown-item"> Branch 1</a>
+    <a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
+    </div>
+    </li>
+    
+    
 <li class="nav-item dropdown">
 <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
 <img src="assets/img/icons/notification-bing.svg" alt="img"> <span class="badge rounded-pill">4</span>
@@ -189,221 +203,182 @@ xhr.onreadystatechange = function () {
 xhr.send();
 </script>
 
-
-
 </div>
 </div>
 </div>
 
-<div class="page-wrapper">
-  <div class="content">
-  <div class="page-header">
-  <div class="page-title">
-  <h3>Breakfast Menu List</h3>
-  </div>
- 
-  </div>
-  
-  <div class="card">
-  <div class="card-body">
-  <div class="table-top">
-  
-</div>
-<div class="table-responsive">
-  <table class="table table-nowrap mb-0">
-  <thead>
-  <tr>
- 
-  <th>Menu List:</th>
-
-  </thead>
-  <tbody>
- 
-    <td class="productimgname">
-    <a href="javascript:void(0);" class="product-img">
-    <img src="assets/img/product/product1.jpg" alt="product">
-    </a>
-    <a href="javascript:void(0);">Tapsilog</a>
-    </td>
- 
-  
-  <tbody>
-    
-    <td class="productimgname">
-    <a href="javascript:void(0);" class="product-img">
-    <img src="assets/img/product/product1.jpg" alt="product">
-    </a>
-    <a href="javascript:void(0);">Bulalo</a>
-    </td>
   
 
- 
- 
-
-  </tbody>
-  </table>
-  </div>
-  <br>
-  <div class="col-lg-12">
-  
-    <a id="openedit"class="btn btn-submit ">Edit</a>
-    <a id="opendelete" class="btn btn-submit " style="background-color: #E60026;">Delete</a>
-    <a class="btn btn-cancel" onclick="goBack()">Cancel</a>
-</div>
-  </div>
-</div>
-</div>
-  
-<div id="editmodal" class="modal">
-          <div class="modal-content">
-          <div class="modal-header">
-          <h5 class="modal-title">Edit Menu</h5>
-          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-          </button>
-          </div>
-          <div class="modal-body">
+        <div class="page-wrapper cardhead">
+          <div class="content ">
+          
+          <div class="page-header">
           <div class="row">
-          <div class="col-12">
+          <div class="col-sm-12">
+          <div class="page-title">
+            <h4>Expenses Details</h4>
+            <h6>Expenses for <a class="card-title"><span id="todays-date"></span></a></h6>
           </div>
-          <div class="col-12">
-          <div class="form-group mb-0">
-          <label>Category</label>
-          <select class="select">
-          <option>Breakfast</option>
-          <option>Lunch</option>
-          <option>Dinner</option>
-          </select>
+          </div>
           </div>
           </div>
           
-          <div class="col-lg-4 ">
-          <div class="form-group mb-0">
-            <br>
-          
-    
-      </div>
-      </div>
-          </div>
-          <center>
-          <div class="col-lg-9">
-            <div class="form-group">
-              <br>
-            <label> Product Image</label>
-            <div class="image-upload">
-            <input type="file">
-            <div class="image-uploads">
-            <img src="assets/img/icons/upload.svg" alt="img">
-            <h4>Drag and drop a file to upload</h4>
-          </center>
-            </div>
-            </div>
-            </div>
-            </div>
-        </div>
-          <div class="modal-footer ">
-          <button type="button" class="btn btn-submit">Confirm</button>
-          <button type="button" id="Back" class="btn btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-          </div>
-          </div>
-          </div>
-          </div>
-
-          <div id="deletemodal" class="modal">
-            <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title">Delete Menu Category</h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-            <div class="row">
-            <div class="col-12">
-            </div>
-          </div>
-
-          <div class="col-12">
-            <div class="form-group mb-0">
+   
             <div class="card">
-              <div class="card-header">
-              <h4 class="card-title">Breakfast</h4>
-           
-              <div class="table-responsive">
-              <table class="table table-nowrap mb-0">
-              <thead>
-              <tr>
-              <th></th>
-              <th>Menu List:</th>
-              <th></th>
-              <th>Action</th>
+            <div class="card-body">
+            <div class="row">
+            <div class="form-group">
+
+          
             
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-              <td>1</td>
-              <td>Tapsilog</td>
-              <td><div class="col-12">
-                <div class="form-group mb-0">
-                <select class="select">
-                <option>Breakfast</option>
-                <option>Lunch</option>
-                <option>Dinner</option>
-                </select>
+                <a href="expensesDetails.html">
+                  <div class="outer-box">
+                    <div class="inner-box"><h3>ELECTRIC BILLS</h3></div>   
+                    <div class="col-lg-12">
+                      <div class="word-box">
+                        P5,600.00
+                      </div>
+                      <div class="sizes">
+                    
+                      <a id="viewimage" class="btn btn-warning" >View Image</a>
+                      <a id="editexpenses"class="btn btn-success ">Edit</a>
+                      <a id="" class="btn btn-danger ">Delete</a>
+                  </div>    
+                  </div>
                 </div>
-                </div></td>
-              <td><a class="me-3 confirm-text" href="javascript:void(0);">
-                <img src="assets/img/icons/delete.svg" alt="img"></td>
+                  
+                    <a href="expensesDetails.html">
+                      <div class="outer-box">
+                        <div class="inner-box"><h3>WATER BILLS</h3></div>
+                        <div class="col-lg-12">
+                          <div class="word-box">
+                            P1,500.00
+                          </div>
+                          <div class="sizes">
+                      
+                          <a id="viewimage" class="btn btn-warning" >View Image</a>
+
+                          <a id=""class="btn btn-success ">Edit</a>
+                          <a id="" class="btn btn-danger ">Delete</a>
+                      </div> 
+                      </div>  
+                    </div>
+          
+                 
+                        <a href="expensesDetails.html">
+                          <div class="outer-box">
+                            <div class="inner-box"><h3>INTERNET BILLS</h3></div>
+                            <div class="col-lg-12">
+                              <div class="word-box">
+                                P3,000.00
+                              </div>
+                              <div class="sizes">
+                               
+                              <a id="viewimage" class="btn btn-warning" >View Image</a>
+                              <a id=""class="btn btn-success ">Edit</a>
+                              <a id="" class="btn btn-danger ">Delete</a>
+                          </div> 
+                        </div>
+                          </div>
+                   
+                       
+
+                          
             
-              </tr>
-              <tr>
-              <td>2</td>
-              <td>Bulalo</td>
-              <td><div class="col-12">
-                <div class="form-group mb-0">
-                <select class="select">
-                <option>Breakfast</option>
-                <option>Lunch</option>
-                <option>Dinner</option>
-                </select>
-                </div>
-                </div></td>
-              <td><a class="me-3 confirm-text" href="javascript:void(0);">
-                <img src="assets/img/icons/delete.svg" alt="img"></td>
-             
-              </tr>
-              </tbody>
-              </table>
-              <br>
-              <br>
-              <button type="button1" class="btn btn-submit">Confirm</button>
-              <button type="button" id="deleteback" class="btn btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
-              </div>
-            </div>
           </div>
+          </div>
+          </div>
+          </div>
+          <div id="showimage" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h5 class="modal-title">View Image</h5>
+                </div>
+                <img src="assets/img/img-02.jpg" alt="Image">
+             
+   
+            </div>
         </div>
+
+        <div id="expedit" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h5 class="modal-title">Edit Expenses</h5>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                <div class="col-12">
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                  <label for="message">Expenses Name</label>
+                  <input type="text" id="message" name="message" value="Electric Bill">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <br>
+                    <label for="message1">Amount</label>
+                    <input type="text" id="message1" name="message" value="P5,600.00">
+                    </div>
+                    </div>
+                  </div>
+      </div>
+        </div>
+          </div>
+          </div>
+          </div>
+      <style>
+/* BOX 1 */
+
+  .outer-box {
+
+    height: 200px;
+    max-width: 350px;
+    min-width: 365px;
+    margin-left: 20px;
+    margin-top: 45px;
+    display: inline-block;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #97cd96;
+    justify-content: center;
+    align-items: center;
     
-            </div>
-            </div>
-            </div>
-    </div>
+  }
+  .inner-box {
+    
+    height: 45px;
+    max-width: 350px;
+    min-width: 364px;
+    margin-left: -1px;
+    margin-top: -1px;
+    display: inline-block;
+    border: 1px solid #000;
+    background-color: #348d34;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 10px;
+    padding-top: 5px;
+    text-align: center;
+   
+  }
+  .word-box {
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    color: #000000;
+    height: 45px;
+    width: 320px;
+    margin-left: 20px;
+    margin-top: 25px;
+    padding-top: 10px;
+    font-size: 18px;
+  
+  }
 
-  </div>
-  </div>
-  </div>
-  
-  
-  
-  
-</div>
-
-<style>
-.button1 {
-  align-items: center;
-}
-
-h4 {text-align: center;}
 
   .modal {
     display: none;
@@ -412,7 +387,7 @@ h4 {text-align: center;}
     left: 0;
     top: 0;
     width: 100%;
-    height: 142%;
+    height: 128%;
     overflow: auto;
     padding-top: auto;
     background-color: rgb(0,0,0);
@@ -420,17 +395,16 @@ h4 {text-align: center;}
 }
 
 .modal-content {
-    background-color: #fefefe;
+  background-color: #fefefe;
     margin: 10% auto;
     padding: 10px;
     border: 1px solid #888;
     width: 40%;
     height: auto;
-    
 }
 
 .close {
-    color: #aaa;
+  color: #aaa;
     float: right;
     font-size: 100px;
     font-weight: bold;
@@ -441,64 +415,71 @@ h4 {text-align: center;}
 
 .close:hover,
 .close:focus {
-    color: black;
+  color: black;
     text-decoration: none;
     cursor: pointer;
 }
-.color-picker {
-   
-    display: flex;
-    align-items: center;
-    padding: 10px;  
-    
+.btn-warning {
+  width: 35%;
+}
+.btn-danger {
+  width: 30%;
+}
+.btn-success {
+  width: 30%;
+}
+.sizes {
+  margin-left: 10px;
+  margin-top: 35px;
 }
 
-.color-box {
-    width: 120px;
-    height: 80px;
-    border: 1px solid #000;
-    margin-left: 10px;
+
+        
+   </style>
+
+
+    
+    <script>
+
+const dateElement = document.getElementById('todays-date');
+          const today = new Date();
+          const options = { year: 'numeric', month: 'long'};
+          dateElement.textContent = today.toLocaleDateString(undefined, options);
   
-    
-}
-
-
-</style>
-
-  <script>
-
-
-document.getElementById('openedit').addEventListener('click', function() {
-    document.getElementById('editmodal').style.display = 'block';
+          document.getElementById('viewimage').addEventListener('click', function() {
+    document.getElementById('showimage').style.display = 'block';
 });
 
 document.getElementsByClassName('close')[0].addEventListener('click', function() {
-    document.getElementById('editmodal').style.display = 'none';
-});
-document.getElementById('Back').addEventListener('click', function() {
-    document.getElementById('editmodal').style.display = 'none';
+    document.getElementById('showimage').style.display = 'none';
 });
 
-document.getElementById('opendelete').addEventListener('click', function() {
-    document.getElementById('deletemodal').style.display = 'block';
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        document.getElementById('showimage').style.display = 'none';
+    }
+});
+
+document.getElementById('editexpenses').addEventListener('click', function() {
+    document.getElementById('expedit').style.display = 'block';
 });
 
 document.getElementsByClassName('close')[1].addEventListener('click', function() {
-    document.getElementById('deletemodal').style.display = 'none';
-});
-document.getElementById('deleteback').addEventListener('click', function() {
-    document.getElementById('deletemodal').style.display = 'none';
+    document.getElementById('expedit').style.display = 'none';
 });
 
-document.getElementById('colorInput').addEventListener('input', function() {
-    const colorValue = this.value;
-    document.getElementById('colorBox').style.backgroundColor = colorValue;
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        document.getElementById('expedit').style.display = 'none';
+    }
 });
 
-document.getElementById('confirmButton').addEventListener('click', function() {
-    const selectedColor = document.getElementById('colorInput').value;
-    alert(`You selected the color: ${selectedColor}`);
-});
+
+
+
+
+
+
     </script>
   
 
@@ -506,9 +487,23 @@ document.getElementById('confirmButton').addEventListener('click', function() {
     
 </div>
 
+</div>
+</div>
+</div>
 
 </body>
+
 <script src="assets/js/jquery-3.6.0.min.js"></script>
+
+
+
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/plugins/stickynote/sticky.js"></script>
+
+<script src="assets/js/script.js"></script>
 
 <script src="assets/js/feather.min.js"></script>
 

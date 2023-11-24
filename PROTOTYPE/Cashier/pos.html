@@ -300,22 +300,25 @@
             <div class="tabs_container">
               <div class="tab_content active" data-tab="fruits">
                 <div class="row">
+
+
                   <div class="col-lg-3 col-sm-6 d-flex">
-                    <div class="productset flex-fill active">
+                    <div class="productset flex-fi">
                       <div class="productsetimg">
-                        <img src="assets/img/product/meals-sisig.jpg" alt="img" />
-                        <h6>Qty: 5.00</h6>
-                        <div class="check-product">
-                          <i class="fa fa-check"></i>
-                        </div>
+                        <img
+                          src="assets/img/product/meals-sisig.jpg"
+                          alt="img"
+                        />
                       </div>
                       <div class="productsetcontent">
                         <h5>Meals</h5>
                         <h4>Sisig</h4>
                         <h6>150.00</h6>
+                        <button class="add-to-cart-button">Add to Cart</button>
                       </div>
                     </div>
                   </div>
+
                   <div class="col-lg-3 col-sm-6 d-flex">
                     <div class="productset flex-fill">
                       <div class="productsetimg">
@@ -1302,6 +1305,40 @@
   </div>
 
 
+  <style>
+           
+    /* Reset standard margin and padding */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+.productsetcontent {
+margin: 0;
+}
+
+.add-to-cart-button {
+width: 100%;
+padding: 10px 0; /* Set top and bottom padding to 10px, remove left and right padding */
+margin: 0; /* Remove margin */
+background-color: #4caf50;
+color: white;
+border: none;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+background-color: #45a049;
+}
+
+
+</style>
 
   <script src="assets/js/jquery-3.6.0.min.js"></script>
 

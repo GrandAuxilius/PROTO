@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <meta name="description" content="POS - Bootstrap Admin Template">
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Dreams Pos admin template</title>
+<title>Leonidas Restaurant</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
@@ -17,6 +17,8 @@
 
 <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
 
+<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
 <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
@@ -24,12 +26,9 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 
-<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css" />
+<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 
-<link
-  rel="stylesheet"
-  href="assets/plugins/fullcalendar/fullcalendar.min.css"
-/>
+<link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar.min.css">
 </head>
 <body>
 <div id="global-loader">
@@ -60,6 +59,8 @@
 </a>
 
 <ul class="nav user-menu">
+
+
 
 <li class="nav-item dropdown">
 <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
@@ -182,6 +183,7 @@
 
 </div>
 
+
 <div id="sidebar-container"></div>
 <script>
  var xhr = new XMLHttpRequest();
@@ -195,147 +197,74 @@ xhr.send();
 </script>
 
 </div>
-
+</div>
+</div>
 
 <div class="page-wrapper">
-  <div class="content">
-  <div class="page-header">
-    <div class="row">
-      <div class="col-sm-12">
-        <h4>Daily Sales</h4>
-        <h6>September 22, 2023</h6>
-      </div>
-      </div>
+<div class="content">
+<div class="page-header">
+<div class="page-title">
+<h4>Purchase Order List</h4>
+<h6>Purchase Order Date List in Inventory</h6>
+</div>
+</div>
+
+<div class="card">
+<div class="card-body">
+
+
+
+  <div class="fc-toolbar fc-header-toolbar">
+    <div class="fc-left">
+      <div class="fc-button-group">
+    <button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left"><span class="fc-icon fc-icon-left-single-arrow"></span></button> 
+    <button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right"><span class="fc-icon fc-icon-right-single-arrow"></span></button> 
+    </div><button type="button" class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right fc-state-disabled" disabled="">today</button> 
   </div>
-  
-  <div class="card">
-  <div class="card-body">
-    <div class="fc-toolbar fc-header-toolbar">
-      <div class="fc-left">
-        <div class="fc-button-group">
-          <button
-            type="button"
-            class="fc-prev-button fc-button fc-state-default fc-corner-left"
-          >
-            <span class="fc-icon fc-icon-left-single-arrow"></span>
-          </button>
-          <button
-            type="button"
-            class="fc-next-button fc-button fc-state-default fc-corner-right"
-          >
-            <span class="fc-icon fc-icon-right-single-arrow"></span>
-          </button>
-        </div>
-        <button
-          type="button"
-          class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right fc-state-disabled"
-          disabled=""
-        >
-          today
-        </button>
-      </div>
-      <div class="fc-right">
-        <div class="fc-button-group">
-          <button
-            type="button"
-            class="fc-month-button fc-button fc-state-default fc-corner-left fc-state-active"
-          >
-            month
-          </button>
-          <button
-            type="button"
-            class="fc-agendaWeek-button fc-button fc-state-default"
-          >
-            week
-          </button>
-          <button
-            type="button"
-            class="fc-agendaDay-button fc-button fc-state-default fc-corner-right"
-          >
-            day
-          </button>
-        </div>
-      </div>
-      <div class="fc-center"><h2>September 2023</h2></div>
-      <div class="fc-clear"></div>
-    </div>
+  <div class="fc-right">
+    <div class="fc-button-group">
+    <button type="button" class="fc-month-button fc-button fc-state-default fc-corner-left fc-state-active">month</button>
+    <button type="button" class="fc-agendaWeek-button fc-button fc-state-default">week</button>
+    <button type="button" class="fc-agendaDay-button fc-button fc-state-default fc-corner-right">day</button>
+  </div>
+</div>
+<div class="fc-center"><h2>September 2023</h2></div>
+<div class="fc-clear"></div></div>
+<br>
+
 
 <div class="table-responsive">
-  <table class="table table-nowrap mb-0">
-  <thead>
-  <tr>
-  <th>Date</th>
-  <th>Total Orders</th>
-  <th>Total Sales</th>
-  </tr>
-  </thead>
+<table class="table ">
+<thead>
+<tr>
 
-  <tbody>
- <tr onclick="redirectToPage('salesDailyDetails.html')">
- <td>September 22, 2023</td>
- <td>20</td>
- <td>P9,460.00</td>
- </tr>
- 
-    <tr onclick="redirectToPage('salesDailyDetails.html')"> 
-    <td>September 23, 2023</td>
-    <td>30</td>
-    <td>P14,600.00</td>
-  </tr>
+<th>Date</th>
 
-  </tbody>
-  </table>
-  <br>
-  </div>
-  <br>
- 
-  </div>
+</tr>
+</thead>
+<tbody>
+<tr onclick="window.location='restockingHistoryList.html';"><td>June 12, 2023</td></tr>
+<tr onclick="window.location='restockingHistoryList.html';"><td>June 11, 2023</td></tr>
+<tr onclick="window.location='restockingHistoryList.html';"><td>June 10, 2023</td></tr>
+<tr onclick="window.location='restockingHistoryList.html';"><td>June 9, 2023</td></tr>
+<tr onclick="window.location='restockingHistoryList.html';"><td>June 8, 2023</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 
 
-
-</div>
-</div>
-
-
-<style>
-.button1 {
-  align-items: center;
-}
-h4 {
-  text-align: center;
-}
- .card {
- 
-            text-align: center;
-        }
-        .card-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 16px;
-            text-align: center;
-            align-items: center;
-        }
-  
-       
-
-
-</style>
-
-  <script>
-
-
-function redirectToPage(pageUrl) {
-            window.location.href = pageUrl;
-        }
-    </script>
-  
-
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/feather.min.js"></script>
+
+<script src="assets/plugins/moment/moment.min.js"></script>
 
 <script src="assets/js/jquery.slimscroll.min.js"></script>
 
@@ -346,9 +275,19 @@ function redirectToPage(pageUrl) {
 
 <script src="assets/plugins/select2/js/select2.min.js"></script>
 
+<script src="assets/js/moment.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
 <script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
 <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
 <script src="assets/js/script.js"></script>
+
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="assets/plugins/fullcalendar/jquery.fullcalendar.js"></script>
+
+<script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+<script src="assets/plugins/apexchart/chart-data.js"></script>
 </body>
 </html>
