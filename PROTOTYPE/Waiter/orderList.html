@@ -43,10 +43,10 @@
     <div class="main-wrapper">
       <div class="header">
         <div class="header-left active">
-          <a href="index.html" class="logo">
+          <a href="orderlist.html" class="logo">
             <img src="assets/img/logo.png" alt="" />
           </a>
-          <a href="index.html" class="logo-small">
+          <a href="orderlist.html" class="logo-small">
             <img src="assets/img/logo-small.png" alt="" />
           </a>
           <a id="toggle_btn" href="javascript:void(0);"> </a>
@@ -90,11 +90,8 @@
                 <a class="dropdown-item" href="profile.html">
                   <i class="me-2" data-feather="user"></i> My Profile</a
                 >
-                <a class="dropdown-item" href="generalsettings.html"
-                  ><i class="me-2" data-feather="settings"></i>Settings</a
-                >
                 <hr class="m-0" />
-                <a class="dropdown-item logout pb-0" href="signin.html"
+                <a class="dropdown-item logout pb-0" href="staffsignin.html"
                   ><img
                     src="assets/img/icons/log-out.svg"
                     class="me-2"
@@ -116,8 +113,7 @@
           ></a>
           <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="profile.html">My Profile</a>
-            <a class="dropdown-item" href="generalsettings.html">Settings</a>
-            <a class="dropdown-item" href="signin.html">Logout</a>
+            <a class="dropdown-item" href="Staffsignin.html">Logout</a>
           </div>
         </div>
       </div>
@@ -165,8 +161,6 @@
                       </ul>
                       <div class="tab-content">
                         <div class="tab-pane show active" id="solid-rounded-justified-tab1" >
-                          
-
                           <div class="row">
 
                             <div class="col-md-4 col-sm-6">
@@ -202,10 +196,26 @@
                             </div>
                             </div>
                           </div>
-
                         </div>
                         <div class="tab-pane" id="solid-rounded-justified-tab2">
-                          Tab content 2
+                                                    <div class="row">
+
+                            <div class="col-md-4 col-sm-6">
+                              <div class="ribbon-wrapper card">
+                                <div class="card-body">
+                                  <div class="ribbon ribbon-success ribbon-right">Order ID: 202306211</div>
+                                  <div class="box-order"  href="#" data-bs-toggle="modal" data-bs-target="#order2" >
+                                    <img src="assets/img/order.png" class="order-img" />
+                                    <div class="order-details">
+                                      <p>
+                                        <strong>Customer Name:</strong><br> Francis Joe Pilarmeo<br>
+                                        <strong>Table Number:</strong> 12
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -219,13 +229,7 @@
       </div>
     </div>
 
-    <div
-      class="modal fade"
-      id="order1"
-      tabindex="-1"
-      aria-hidden="true"
-      style="display: none"
-    >
+    <div class="modal fade" id="order1" tabindex="-1" aria-hidden="true" style="display: none" >
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -320,6 +324,104 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="order2" tabindex="-1" aria-hidden="true" style="display: none" >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Order Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <div class="modal-body-transaction">
+            <div class="row">
+              <div class="col-12">
+                <div class="order-details">
+                <strong>
+                  Order ID: 202080099
+                </strong>
+                <strong class="left-auto">Table Number: 12</strong>
+              </div>
+                <div class="customer-info">
+                  <div class="table-responsive">
+                    <table class="table mb-0">
+                      <thead>
+                        <tr></tr>
+                      </thead>
+                      <tbody>
+                        <strong>Orders List:</strong>
+                        <tr>
+                          <td>
+                            <div class="dishname">
+                              <span>Chicken Inasal</span> (Meal) <br />x3
+                            </div>
+                          </td>
+                          <td></td>
+                          <td>
+                            <img
+                              src="assets/img/yum.png"
+                              height="50"
+                              width="50"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="dishname">
+                              <span>Classsic TLC Burgers</span> (Burgers)
+                              <br />x1
+                            </div>
+                          </td>
+                          <td></td>
+                          <td>
+                            <img
+                              src="assets/img/yum.png"
+                              height="50"
+                              width="50"
+                            />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <style>
+                  .dishname {
+                    text-align: left;
+                    margin-left: 15px;
+                  }
+                  .dishname span {
+                    font-weight: bold;
+                  }
+                  .order-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-auto {
+  margin-left: auto;
+}
+
+                </style>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-submit">Order Completed</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <style>
       .customer-info {
         background-color: white;

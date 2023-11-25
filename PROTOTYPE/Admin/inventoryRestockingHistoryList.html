@@ -55,6 +55,20 @@
 </a>
 
 <ul class="nav user-menu">
+  <li class="nav-item dropdown has-arrow flag-nav">
+    <a
+      class="nav-link dropdown-toggle"
+      data-bs-toggle="dropdown"
+      href="javascript:void(0);"
+      role="button"
+    >
+      <img src="assets/img/flags/branch.png" alt="" height="20" />
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+      <a href="javascript:void(0);" class="dropdown-item"> Branch 1</a>
+      <a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
+    </div>
+  </li>
 
 
 
@@ -201,8 +215,8 @@ xhr.send();
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>Inventory Status</h4>
-<h6>Current Stocks in the Inventory (<a class="card-title"><span id="current-date"></span></a>)</h6>
+<h4>Restocking History</h4>
+<h6>Restocking History List on (<a class="card-title"><span id="current-date"></span></a>)</h6>
 </div>
 </div>
 
@@ -221,30 +235,7 @@ xhr.send();
 </div>
 </div>
 
-<div class="col-lg-2 col-sm-6 col-12">
-<div class="form-group">
 
-</div>
-</div>
-
-<script>
-const currentDate = new Date();
-
-const monthNames = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'
-];
-
-const month = monthNames[currentDate.getMonth()];
-const day = currentDate.getDate();
-const year = currentDate.getFullYear();
-
-const formattedDate = `${month} ${day}, ${year}`;
-
-document.getElementById('current-date').textContent = formattedDate;
-
-
-  </script>
 
 </div>
 
@@ -253,31 +244,30 @@ document.getElementById('current-date').textContent = formattedDate;
 <div class="row">
 <div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<input type="text" placeholder="Enter Stock Name">
+<input type="text" placeholder="Enter User Name">
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 col-12">
+<div class="form-group">
+<input type="text" placeholder="Enter Phone">
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 col-12">
+<div class="form-group">
+<input type="text" placeholder="Enter Email">
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 col-12">
+<div class="form-group">
+<input type="text" class="datetimepicker cal-icon" placeholder="Choose Date">
 </div>
 </div>
 <div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
 <select class="select">
-<option>Select Category</option>
-<option>Meats</option>
-<option>Condements</option>
+<option>Disable</option>
+<option>Enable</option>
 </select>
-</div>
-</div>
-<div class="col-lg-2 col-sm-6 col-12">
-<div class="form-group">
-<input type="text" placeholder="Enter Quantity">
-</div>
-</div>
-<div class="col-lg-2 col-sm-6 col-12">
-<div class="form-group">
-<input type="text" placeholder="Enter Unit Cost">
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<input type="text" placeholder="Enter Reorder Point">
 </div>
 </div>
 <div class="col-lg-1 col-sm-6 col-12 ms-auto">
@@ -313,10 +303,8 @@ document.getElementById('current-date').textContent = formattedDate;
 <td>170.00</td>
 <td>1</td>
 <td>
-<a class="me-3" href="inventoryStockDetails.html">
-<img src="assets/img/icons/eye.svg" alt="img">
-</a>
-<a class="me-3" href="inventoryStocksEdit.html">
+
+<a class="me-3" href="inventoryPurchaseOrderEdit.html">
 <img src="assets/img/icons/edit.svg" alt="img">
 </a>
 <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -331,10 +319,8 @@ document.getElementById('current-date').textContent = formattedDate;
 <td>270.00</td>
 <td>1</td>
 <td>
-<a class="me-3" href="inventoryStockDetails.html">
-<img src="assets/img/icons/eye.svg" alt="img">
-</a>
-<a class="me-3" href="inventoryStocksEdit.html">
+
+<a class="me-3" href="inventoryPurchaseOrderEdit.html">
 <img src="assets/img/icons/edit.svg" alt="img">
 </a>
 <a class="me-3 confirm-text" href="javascript:void(0);">
@@ -345,14 +331,36 @@ document.getElementById('current-date').textContent = formattedDate;
 
 </tbody>
 </table>
+</div >
 </div>
 </div>
-</div>
+
+<div style="text-align: right;">
+  <a href="javascript:void(0);" class="btn btn-cancel" onclick="goBack()">Cancel</a>
 </div>
 </div>
 
 
 
+<script>
+    const currentDate = new Date();
+    
+    const monthNames = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    
+    const month = monthNames[currentDate.getMonth()];
+    const day = currentDate.getDate();
+    const year = currentDate.getFullYear();
+    
+    const formattedDate = `${month} ${day}, ${year}`;
+    
+    document.getElementById('current-date').textContent = formattedDate;
+    
+    
+      </script>
+      
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/feather.min.js"></script>

@@ -25,10 +25,6 @@
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 
 <link rel="stylesheet" href="assets/css/style.css">
-
-<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
-
-<link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar.min.css">
 </head>
 <body>
 <div id="global-loader">
@@ -60,15 +56,7 @@
 
 <ul class="nav user-menu">
 
-<li class="nav-item dropdown has-arrow flag-nav">
-<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
-<img src="assets/img/flags/branch.png" alt="" height="20">
-</a>
-<div class="dropdown-menu dropdown-menu-right">
-<a href="javascript:void(0);" class="dropdown-item"> Branch 1</a>
-<a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
-</div>
-</li>
+
 
 
 <li class="nav-item dropdown">
@@ -213,66 +201,139 @@ xhr.send();
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>Purchase Order List</h4>
-<h6>Purchase Order Date List in Inventory</h6>
+<h4>Restocking History</h4>
+<h6>Restocking History List on (<a class="card-title"><span id="current-date"></span></a>)</h6>
 </div>
 </div>
 
 <div class="card">
 <div class="card-body">
-
-
-
-  <div class="fc-toolbar fc-header-toolbar">
-    <div class="fc-left">
-      <div class="fc-button-group">
-    <button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left"><span class="fc-icon fc-icon-left-single-arrow"></span></button> 
-    <button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right"><span class="fc-icon fc-icon-right-single-arrow"></span></button> 
-    </div><button type="button" class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right fc-state-disabled" disabled="">today</button> 
-  </div>
-  <div class="fc-right">
-    <div class="fc-button-group">
-    <button type="button" class="fc-month-button fc-button fc-state-default fc-corner-left fc-state-active">month</button>
-    <button type="button" class="fc-agendaWeek-button fc-button fc-state-default">week</button>
-  </div>
+<div class="table-top">
+<div class="search-set">
+<div class="search-path">
+<a class="btn btn-filter" id="filter_search">
+<img src="assets/img/icons/filter.svg" alt="img">
+<span><img src="assets/img/icons/closes.svg" alt="img"></span>
+</a>
 </div>
-<div class="fc-center"><h2>September 2023</h2></div>
-<div class="fc-clear"></div></div>
-<br>
+<div class="search-input">
+<a class="btn btn-searchset"><img src="assets/img/icons/search-white.svg" alt="img"></a>
+</div>
+</div>
 
+
+
+</div>
+
+<div class="card" id="filter_inputs">
+<div class="card-body pb-0">
+<div class="row">
+<div class="col-lg-2 col-sm-6 col-12">
+<div class="form-group">
+<input type="text" placeholder="Enter User Name">
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 col-12">
+<div class="form-group">
+<input type="text" placeholder="Enter Phone">
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 col-12">
+<div class="form-group">
+<input type="text" placeholder="Enter Email">
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 col-12">
+<div class="form-group">
+<input type="text" class="datetimepicker cal-icon" placeholder="Choose Date">
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 col-12">
+<div class="form-group">
+<select class="select">
+<option>Disable</option>
+<option>Enable</option>
+</select>
+</div>
+</div>
+<div class="col-lg-1 col-sm-6 col-12 ms-auto">
+<div class="form-group">
+<a class="btn btn-filters ms-auto"><img src="assets/img/icons/search-whites.svg" alt="img"></a>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 <div class="table-responsive">
-<table class="table ">
+<table class="table  datanew">
 <thead>
 <tr>
 
-<th>Date</th>
+<th>Stock Name</th>
+<th>Category</th>
+<th>Quantity</th>
+<th>Unit</th>
+<th>Unit Cost</th>
+<th>Reorder Point</th>
 
 </tr>
 </thead>
 <tbody>
-<tr onclick="window.location='inventoryPurchaseOrderList.html';"><td>June 12, 2023</td></tr>
-<tr onclick="window.location='inventoryPurchaseOrderList.html';"><td>June 11, 2023</td></tr>
-<tr onclick="window.location='inventoryPurchaseOrderList.html';"><td>June 10, 2023</td></tr>
-<tr onclick="window.location='inventoryPurchaseOrderList.html';"><td>June 9, 2023</td></tr>
-<tr onclick="window.location='inventoryPurchaseOrderList.html';"><td>June 8, 2023</td></tr>
+<tr>
+ 
+<td>Chicken</td>
+<td>Meats</td>
+<td>5</td>
+<td>kilogram(kg)</td>
+<td>170.00</td>
+<td>1</td>
+
+</tr>
+<td>Pork</td>
+<td>Meats</td>
+<td>7</td>
+<td>kilogram(kg)</td>
+<td>270.00</td>
+<td>1</td>
+
+</tr>
+
 </tbody>
 </table>
+</div >
 </div>
 </div>
-</div>
+
+<div style="text-align: right;">
+  <a href="javascript:void(0);" class="btn btn-cancel" onclick="goBack()">Cancel</a>
 </div>
 </div>
 
 
 
+<script>
+    const currentDate = new Date();
+    
+    const monthNames = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    
+    const month = monthNames[currentDate.getMonth()];
+    const day = currentDate.getDate();
+    const year = currentDate.getFullYear();
+    
+    const formattedDate = `${month} ${day}, ${year}`;
+    
+    document.getElementById('current-date').textContent = formattedDate;
+    
+    
+      </script>
+      
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
 
-<script src="assets/js/jquery-3.6.0.min.js"></script>
-
 <script src="assets/js/feather.min.js"></script>
-
-<script src="assets/plugins/moment/moment.min.js"></script>
 
 <script src="assets/js/jquery.slimscroll.min.js"></script>
 
@@ -290,12 +351,5 @@ xhr.send();
 <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
 <script src="assets/js/script.js"></script>
-
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/plugins/fullcalendar/fullcalendar.min.js"></script>
-<script src="assets/plugins/fullcalendar/jquery.fullcalendar.js"></script>
-
-<script src="assets/plugins/apexchart/apexcharts.min.js"></script>
-<script src="assets/plugins/apexchart/chart-data.js"></script>
 </body>
 </html>
