@@ -21,6 +21,12 @@
       href="assets/img/favicon.png"
     />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="assets/css/animate.css" />
@@ -311,27 +317,16 @@
               </div>
               <div class="fc-right">
                 <div class="fc-button-group">
-                  <button
-                    type="button"
-                    class="fc-month-button fc-button fc-state-default fc-corner-left fc-state-active"
-                  >
-                    month
-                  </button>
-                  <button
-                    type="button"
-                    class="fc-agendaWeek-button fc-button fc-state-default"
-                  >
-                    week
-                  </button>
-                  <button
-                    type="button"
-                    class="fc-agendaDay-button fc-button fc-state-default fc-corner-right"
-                  >
-                    day
+                   
+      <button
+      type="button"
+      class="fc-calendar-button fc-button fc-state-default" style="background-color: rgb(201, 226, 204 219)">
+      <span class="fa fa-calendar"></span>
+    </button>
                   </button>
                 </div>
               </div>
-              <div class="fc-center"><h2>September 2023</h2></div>
+              <div class="fc-center" style="margin-right:10%;"><h2>September 2023</h2></div>
               <div class="fc-clear"></div>
             </div>
 <br>
@@ -393,9 +388,22 @@
 
     <script>
       function redirectToPage(pageUrl) {
-        window.location.href = pageUrl;
+          window.location.href = pageUrl;
       }
-    </script>
+  
+      document.addEventListener('DOMContentLoaded', function () {
+          // Function to show mini calendar on button click
+          flatpickr(".fc-calendar-button", {
+              onChange: function (selectedDates, dateStr, instance) {
+                  // Handle date selection if needed
+              },
+              onClose: function (selectedDates, dateStr, instance) {
+                  // Handle date selection if needed
+              }
+          });
+      });
+  </script>
+  
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
 

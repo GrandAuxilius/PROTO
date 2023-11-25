@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -7,13 +7,7 @@
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Leonidas Restaurant</title>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<title>Dreams Pos admin template</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
@@ -23,18 +17,12 @@
 
 <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
 
-<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
-
 <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 
 <link rel="stylesheet" href="assets/css/style.css">
-
-<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
-
-<link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar.min.css">
 </head>
 <body>
 <div id="global-loader">
@@ -202,6 +190,7 @@ xhr.onreadystatechange = function () {
 xhr.send();
 </script>
 
+   
 </div>
 </div>
 </div>
@@ -210,84 +199,80 @@ xhr.send();
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-  <h4>Restocking History</h4>
-  <h6>Restocking History List in Inventory</h6>
+<h4>Add New Menu Category</h4>
 </div>
 </div>
 
 <div class="card">
 <div class="card-body">
+<div class="row">
+<div class="col-lg-4 col-sm-6 col-12">
+<div class="form-group">
 
 
 
-  <div class="fc-toolbar fc-header-toolbar">
-    <div class="fc-left">
-      <div class="fc-button-group">
-    <button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left"><span class="fc-icon fc-icon-left-single-arrow"></span></button> 
-    <button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right"><span class="fc-icon fc-icon-right-single-arrow"></span></button> 
-    </div><button type="button" class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right fc-state-disabled" disabled="">today</button> 
-  </div>
-  <div class="fc-right">
-    <div class="fc-button-group">
-  
+<label>Category</label>
+<select class="select">
+<option>Breakfast</option>
+<option>Lunch</option>
+<option>Dinner</option>
+</select>
+</div>
+</div>
        
-      <button
-      type="button"
-      class="fc-calendar-button fc-button fc-state-default" style="background-color: rgb(201, 226, 204 219)">
-      <span class="fa fa-calendar"></span>
-    </button>
         
+
+     
+<div class="col-lg-3 col-sm-6 col-12">
+  <div class="form-group">
+  <label> Category Image </label>
+  <div class="image-upload image-upload-new">
+  <input type="file">
+  <div class="image-uploads">
+  <img src="assets/img/icons/upload.svg" alt="img">
+  <h4>Drag and drop a file to upload</h4>
   </div>
-</div>
-<div class="fc-center" style="margin-right:10%;"><h2>September 2023</h2></div>
-<div class="fc-clear"></div></div>
-<br>
+  </div>
+  </div>
+  </div>
 
-
-<div class="table-responsive">
-<table class="table ">
-<thead>
-<tr>
-
-<th>Date</th>
-
-</tr>
-</thead>
-<tbody>
-<tr onclick="window.location='inventoryrestockingHistoryList.html';"><td>June 12, 2023</td></tr>
-<tr onclick="window.location='inventoryrestockingHistoryList.html';"><td>June 11, 2023</td></tr>
-<tr onclick="window.location='inventoryrestockingHistoryList.html';"><td>June 10, 2023</td></tr>
-<tr onclick="window.location='inventoryrestockingHistoryList.html';"><td>June 9, 2023</td></tr>
-<tr onclick="window.location='inventoryrestockingHistoryList.html';"><td>June 8, 2023</td></tr>
-</tbody>
-</table>
-</div>
+<div class="col-lg-12">
+<a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
+<a class="btn btn-cancel" onclick="goBack()">Cancel</a>
 </div>
 </div>
 </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      // Function to show mini calendar on button click
-      flatpickr(".fc-calendar-button", {
-          onChange: function (selectedDates, dateStr, instance) {
-              // Handle date selection if needed
-          },
-          onClose: function (selectedDates, dateStr, instance) {
-              // Handle date selection if needed
-          }
-      });
-  });
-</script>
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
+<style>
+
+.color-picker {
+   
+   display: flex;
+   align-items: center;
+   padding: 10px;  
+   
+}
+
+.color-box {
+   width: 80px;
+   height: 40px;
+   border: 1px solid #000;
+   margin-left: 10px;
+ 
+   
+}
+
+</style>
+</div>
+</div>
+</div>
+
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/feather.min.js"></script>
-
-<script src="assets/plugins/moment/moment.min.js"></script>
 
 <script src="assets/js/jquery.slimscroll.min.js"></script>
 
@@ -298,19 +283,9 @@ xhr.send();
 
 <script src="assets/plugins/select2/js/select2.min.js"></script>
 
-<script src="assets/js/moment.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
 <script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
 <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
 <script src="assets/js/script.js"></script>
-
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/plugins/fullcalendar/fullcalendar.min.js"></script>
-<script src="assets/plugins/fullcalendar/jquery.fullcalendar.js"></script>
-
-<script src="assets/plugins/apexchart/apexcharts.min.js"></script>
-<script src="assets/plugins/apexchart/chart-data.js"></script>
 </body>
 </html>
