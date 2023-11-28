@@ -1,19 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 <meta name="description" content="POS - Bootstrap Admin Template">
-<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
+<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Leonidas Restaurant</title>
+<title>Dreams Pos admin template</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="assets/css/animate.css">
+
+<link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
 
 <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 
@@ -52,13 +54,21 @@
 
 <ul class="nav user-menu">
 
-
+<li class="nav-item dropdown has-arrow flag-nav">
+<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
+<img src="assets/img/flags/branch.png" alt="" height="20">
+</a>
+<div class="dropdown-menu dropdown-menu-right">
+<a href="javascript:void(0);" class="dropdown-item"> Branch 1</a>
+<a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
+</div>
+</li>
 
 <li class="nav-item dropdown">
 <a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
 <img src="assets/img/icons/notification-bing.svg" alt="img"> <span class="badge rounded-pill">4</span>
 </a>
-<div class="dropdown-menu notifications">
+ <div class="dropdown-menu notifications">
 <div class="topnav-dropdown-header">
 <span class="notification-title">Notifications</span>
 <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
@@ -93,7 +103,7 @@
 </li>
 <li class="notification-message">
 <a href="activities.html">
- <div class="media d-flex">
+<div class="media d-flex">
 <span class="avatar flex-shrink-0">
 <img alt="" src="assets/img/profiles/avatar-06.jpg">
 </span>
@@ -145,7 +155,7 @@
 </a>
 <div class="dropdown-menu menu-drop-user">
 <div class="profilename">
- <div class="profileset">
+<div class="profileset">
 <span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
 <span class="status online"></span></span>
 <div class="profilesets">
@@ -175,7 +185,6 @@
 
 </div>
 
-
 <div id="sidebar-container"></div>
 <script>
  var xhr = new XMLHttpRequest();
@@ -192,99 +201,80 @@ xhr.send();
 </div>
 </div>
 
-<div class="page-wrapper cardhead">
-<div class="content container-fluid">
-
+<div class="page-wrapper">
+<div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>Stock Details</h4>
-<h6>manage your stock here</h6>
+<h4>User Management</h4>
+<h6>Add Staff User</h6>
 </div>
 </div>
 
-
-
+<div class="card">
+<div class="card-body">
 <div class="row">
-<div class="col-lg-6">
-<div class="card">
-<div class="card-header">
-<h5 class="card-title">Usage History</h5>
+<div class="col-lg-3 col-sm-6 col-12">
+<div class="form-group">
+<label>First Name</label>
+<input type="text">
 </div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-nowrap mb-0">
-<thead>
-<tr>
-<th>Date</th>
-<th>Quantity</th>
-<th>Unit</th>
-<th>Menu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>06-12-2023</td>
-<td>2</td>
-<td>kilogram(kg)</td>
-<td>Adobo</td>
-</tr>
-<tr>
-<td>06-12-2023</td>
-<td>15</td>
-<td>pieces(pcs)</td>
-<td>Hotsilog</td>
-</tr>
-</tbody>
-</table>
+<div class="form-group">
+    <label>Role</label>
+    <select class="select">
+    <option>Select</option>
+    <option>Manager</option>
+    <option>Chef</option>
+    <option>Cashier</option>
+    <option>Waiter</option>
+    </select>
+    </div>
+<div class="form-group">
+<label>Password</label>
+<div class="pass-group">
+<input type="password" class=" pass-input">
+<span class="fas toggle-password fa-eye-slash"></span>
 </div>
 </div>
 </div>
+
+<div class="col-lg-3 col-sm-6 col-12">
+<div class="form-group">
+<label>Last Name</label>
+<input type="text">
 </div>
-<div class="col-lg-6">
-<div class="card">
-<div class="card-header">
-<h5 class="card-title">Purchase History</h5>
+<div class="form-group">
+<label>Email</label>
+<input type="text">
 </div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-nowrap mb-0">
-<thead>
-<tr>
-<th>Date</th>
-<th>Quantity</th>
-<th>Unit</th>
-<th>Unit Cost</th>
-<th>Total Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>06-12-2023</td>
-<td>2</td>
-<td>kilogram(kg)</td>
-<td>120.00</td>
-<td>2,590.00</td>
-</tr>
-<tr>
-<td>06-12-2023</td>
-<td>15</td>
-<td>pieces(pcs)</td>
-<td>350.00</td>
-<td>2,590.00</td>
-</tr>
-</tbody>
-</table>
+
+</div>
+
+<div class="col-lg-3 col-sm-6 col-12">
+<div class="form-group">
+<label> Profile Picture</label>
+<div class="image-upload image-upload-new">
+<input type="file">
+<div class="image-uploads">
+<img src="assets/img/icons/upload.svg" alt="img">
+<h4>Drag and drop a file to upload</h4>
 </div>
 </div>
 </div>
 </div>
+<div class="col-lg-12">
+<a href="javascript:void(0);" class="btn btn-submit me-2">Submit</a>
+<a href="javascript:void(0);" class="btn btn-cancel">Cancel</a>
 </div>
 </div>
 </div>
 </div>
 
+</div>
+</div>
+</div>
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/feather.min.js"></script>
 
@@ -294,6 +284,11 @@ xhr.send();
 <script src="assets/js/dataTables.bootstrap4.min.js"></script>
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/plugins/select2/js/select2.min.js"></script>
+
+<script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+<script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
 <script src="assets/js/script.js"></script>
 </body>

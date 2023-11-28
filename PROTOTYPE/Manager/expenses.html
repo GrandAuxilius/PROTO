@@ -54,6 +54,17 @@
 
 <ul class="nav user-menu">
 
+  <li class="nav-item dropdown has-arrow flag-nav">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0);" role="button">
+    <img src="assets/img/flags/branch.png" alt="" height="20">
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+    <a href="javascript:void(0);" class="dropdown-item"> Branch 1</a>
+    <a href="javascript:void(0);" class="dropdown-item"> Branch 2</a>
+    </div>
+    </li>
+    
+    
 
 
 <li class="nav-item dropdown">
@@ -227,17 +238,21 @@ xhr.send();
   </thead>
 
   <tbody>
-    <tr onclick="redirectToPage('expensesDetails.html')">
+    <tr>
  <td>September 2023</td>
  <td>10,100.00</td>
- <td> <img src="assets/img/icons/eye.svg" alt="img">  </td>
+ <td>     <a class="me-3" href="expensesDetails.html">
+  <img src="assets/img/icons/eye.svg" alt="img" />
+</a>  </td>
  </tr>
  
   <tbody>
-    <tr onclick="redirectToPage('expensesDetails.html')"> 
+    <tr> 
     <td>October 2023</td>
     <td>8,000.00</td>
-    <td> <img src="assets/img/icons/eye.svg" alt="img">  </td>
+    <td>     <a class="me-3" href="expensesDetails.html">
+      <img src="assets/img/icons/eye.svg" alt="img" />
+    </a>  </td>
   </tr>
 
   </tbody>
